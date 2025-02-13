@@ -1,3 +1,7 @@
+document.getElementById('startBtn').onclick = function() {
+    window.location.href = 'heroes.html';
+};
+
 document.getElementById('linkButton1').onclick = function() {
     window.location.href = 'https://librebook.me/abai_s_way/vol1/1';
 };
