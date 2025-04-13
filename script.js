@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let playerPosition = { x: 1, y: 1 };
 
     const playerImage = new Image();
-    playerImage.src = '/img/yertostik.png'; // Путь к изображению Ер-Тостика
+    playerImage.src = './img/yertostik.png'; // Путь к изображению Ер-Тостика
 
     function drawMaze() {
         const scale = mazeCanvas.width / (maze[0].length * cellSize); // Рассчитываем масштаб
