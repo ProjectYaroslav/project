@@ -1,0 +1,540 @@
+/* === Общие стили === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e7e7e7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* === Шапка сайта === */
+.header {
+    background: linear-gradient(to bottom, #005383, #50c7f7);
+    color: #fff;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0.75rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.header nav a:hover {
+    color: #1b1b1b;
+}
+
+/* === Hero-секция === */
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 1rem 1rem;
+    background: linear-gradient(to bottom, #50c7f7, #018f01); /* Голубой к зеленому */
+}
+
+.hero img.header-bg {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero h2 {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    color: #2a2a2a;
+}
+
+/* === Общие секции === */
+.section {
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+/* === Карточки сказок === */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card {
+    background: linear-gradient(135deg, #1727ff, #008cff, #01cafc); /* Градиент из трёх цветов */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    max-width: 300px;
+    flex: 1 1 250px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h4 {
+    margin-bottom: 0.5rem;
+    color: #000000;
+}
+
+.chitat {
+    background-color: #e5e8f5;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* === Галерея героев === */
+.hero-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.hero-card {
+    text-align: center;
+    max-width: 200px;
+    flex: 1 1 150px;
+}
+
+.hero-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* === Игры === */
+.game-list {
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.game-list li {
+    background-color: #f4a261;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.game-list li:hover {
+    background-color: #e76f51;
+}
+
+/* === Культура === */
+#culture p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* === Контактная форма === */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.contact-form button {
+    background-color: #2a9d8f;
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #21867a;
+}
+
+/* === Подвал === */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* === Адаптивность === */
+@media (max-width: 768px) {
+    .cards,
+    .hero-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header nav a {
+        margin: 0.5rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .section h3 {
+        font-size: 1.6rem;
+    }
+}
+
+/* === модалка === */
+
+.card {
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000c1;
+    opacity: 0;
+    transition: all 0.3s;
+    transform: scale(0.8);
+}
+
+.modal--open {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.modal__window {
+    position: relative;
+    width: 90vw; /* Увеличено до 90% ширины экрана */
+    min-height: 40vh;
+    padding: 50px 20px 20px 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow-y: auto; /* Добавлено для прокрутки */
+    max-height: 90vh; /* Ограничение высоты для прокрутки */
+    background: linear-gradient(to bottom, #a2f9fc, #a3ff7f);
+}
+
+.modal__close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.modal__window--full {
+    width: 100vw; /* Ширина окна равна ширине экрана */
+    height: auto;
+    max-width: none;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden; /* Убирает горизонтальную прокрутку */
+}
+
+/* === Разделители === */
+.section-divider {
+    height: 2px;
+    background-color: #ccc;
+    margin: 2rem 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1px;
+}
+
+/* === Стили для отдельных фонов каждой секции === */
+#tales-section {
+    background: linear-gradient(to bottom, #018f01, #fcd64f);
+    padding: 3rem 1rem;
+}
+
+#heroes-section {
+    background: linear-gradient(to bottom, #fcd64f, #a1c4fd);
+    padding: 3rem 1rem;
+}
+
+#games-section {
+    background: linear-gradient(to bottom, #a1c4fd, #fbc2eb);
+    padding: 3rem 1rem;
+}
+
+#culture-section {
+    background: linear-gradient(to bottom, #fbc2eb, #a6c1ee);
+    padding: 3rem 1rem;
+}
+
+.game-btn {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Градиент для кнопки */
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 0.5rem 0;
+    display: inline-block;
+    text-align: center;
+    width: 300px; /* Увеличенная ширина кнопок */
+}
+
+.game-btn:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f); /* Обратный градиент при наведении */
+    transform: scale(1.05); /* Лёгкое увеличение */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-details-btn {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Градиент для кнопки */
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-details-btn:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f); /* Обратный градиент при наведении */
+    transform: scale(1.05); /* Лёгкое увеличение */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal__window img {
+    width: auto;
+    height: 100%;
+    max-height: 300px; /* Ограничение высоты для изображения */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.game-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.game-btn {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Градиент для кнопки */
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px; /* Фиксированная ширина кнопок */
+    height: 60px; /* Фиксированная высота кнопок */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-btn:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f); /* Обратный градиент при наведении */
+    transform: scale(1.05); /* Лёгкое увеличение */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+#maze-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 100%; /* Ограничиваем ширину контейнера */
+    overflow: hidden; /* Скрываем лишнее */
+}
+
+#mazeCanvas {
+    border: 2px solid #ccc;
+    background-color: #f9f9f9;
+    width: 100%; /* Устанавливаем ширину в 100% */
+    max-width: 600px; /* Максимальная ширина */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+}
+
+#maze-container img {
+    display: none; /* Скрываем изображение, оно будет использоваться в скрипте */
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.controls button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.controls button:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+    transform: scale(1.05);
+}
+
+#maze-message {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #28a745;
+}
+
+#guess-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.question {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+#check-answers-btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#check-answers-btn:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+    transform: scale(1.05);
+}
+
+#guess-result {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #28a745;
+    text-align: center;
+}
+
+#quest-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#quest-scene {
+    text-align: center;
+}
+
+.quest-option {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin: 0.5rem 0;
+}
+
+.quest-option:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+    transform: scale(1.05);
+}
+
+#quest-message {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #28a745;
+    text-align: center;
+}
