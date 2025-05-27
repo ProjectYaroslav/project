@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наследие Абая</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-bg"></div>
+        <h1>Наследие Абая</h1>
+        <nav>
+            <button id="goToWorks">Перейти к произведениям</button>
+        </nav>
+    </header>
+
+    <div class="main-sections-wrapper">
+        <section class="about">
+            <h2>О великом Абае</h2>
+            <p>Абай Кунанбаев — выдающийся казахский поэт, философ и просветитель. Его творчество оказывает значительное влияние на культуру и развитие казахской нации.</p>
+            <div class="video-container">
+                <iframe width="560" height="315" src="./video/Abai.mp4" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="bio">
+            <h2>Биография</h2>
+            <ul>
+                <li><strong>Рождение:</strong> 10 августа 1845 года, Чингизские горы, Казахстан</li>
+                <li><strong>Настоящее имя:</strong> Ибрагим Кунанбаев</li>
+                <li><strong>Образование:</strong> Медресе, самообразование, изучение русской и восточной литературы</li>
+            </ul>
+        </section>
+
+        <section class="contribution">
+            <h2>Вклад в культуру</h2>
+            <p>Абай Кунанбаев внёс огромный вклад в развитие казахской литературы, философии и просвещения. Его произведения вдохновляют поколения, а идеи о важности образования, нравственности и единства народа актуальны и сегодня.</p>
+            <ul>
+                <li>Автор знаменитых <strong>«Слов назидания»</strong></li>
+                <li>Переводчик произведений Пушкина, Лермонтова, Крылова</li>
+                <li>Реформатор казахской поэзии</li>
+            </ul>
+        </section>
+
+        <section class="gallery">
+            <h2>Галерея</h2>
+            <div class="gallery-grid">
+                <div>
+                    <img src="./img/abai.webp" alt="Абай Кунанбаев">
+                    <div class="gallery-caption">Портрет Абая</div>
+                </div>
+                <div>
+                    <img src="./img/pamyatnik.webp" alt="Памятник Абая">
+                    <div class="gallery-caption">Памятник Абаю</div>
+                </div>
+                <div>
+                    <img src="./img/book.jpeg" alt="Книги Абая">
+                    <div class="gallery-caption">Книги Абая</div>
+                </div>
+                <div>
+                    <img src="./img/stihi.jpg" alt="Стихи Абая">
+                    <div class="gallery-caption">Сборник стихов</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="quotes">
+            <h2>Цитаты Абая</h2>
+            <blockquote>«Человек рождается для труда, как птица для полёта»</blockquote>
+            <blockquote>«Знание — свет, невежество — тьма»</blockquote>
+            <blockquote>«Лучшее богатство — это ум и доброта»</blockquote>
+        </section>
+
+        <section class="test-section">
+            <div class="test-info">
+                <div class="test-title">Пройти тест на знания произведений Абая</div>
+                <button id="openTestBtn" class="main-btn test-btn">
+                    Начать
+                </button>
+            </div>
+        </section>
+
+        <div id="testModal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <span class="close" id="closeTestModal">&times;</span>
+                <h2 style="margin-top:0;">Тест на знания произведений Абая</h2>
+                <form id="abaiTestForm">
+                    <div class="test-question">
+                        <p><strong>1. Какое произведение Абая состоит из 45 поучительных глав?</strong></p>
+                        <label><input type="radio" name="q1" value="a"> Масгуд</label><br>
+                        <label><input type="radio" name="q1" value="b"> Искандер</label><br>
+                        <label><input type="radio" name="q1" value="c"> Слова назидания</label>
+                    </div>
+                    <div class="test-question">
+                        <p><strong>2. Какой герой встречается с Кадыром в одном из произведений Абая?</strong></p>
+                        <label><input type="radio" name="q2" value="a"> Масгуд</label><br>
+                        <label><input type="radio" name="q2" value="b"> Искандер</label><br>
+                        <label><input type="radio" name="q2" value="c"> Абай</label>
+                    </div>
+                    <div class="test-question">
+                        <p><strong>3. Какой философ был наставником Искандера в поэме Абая?</strong></p>
+                        <label><input type="radio" name="q3" value="a"> Сократ</label><br>
+                        <label><input type="radio" name="q3" value="b"> Аристотель</label><br>
+                        <label><input type="radio" name="q3" value="c"> Платон</label>
+                    </div>
+                    <div class="test-question">
+                        <p><strong>4. Какой главный смысл заложен в поэме «Масгуд»?</strong></p>
+                        <label><input type="radio" name="q4" value="a"> Власть и богатство — главное</label><br>
+                        <label><input type="radio" name="q4" value="b"> Истинная ценность — в мудрости и доброте</label><br>
+                        <label><input type="radio" name="q4" value="c"> Сила важнее ума</label>
+                    </div>
+                    <button type="submit" class="main-btn" style="margin-top:1.2rem;">Проверить ответы</button>
+                </form>
+                <div id="testResult" style="margin-top:1.2rem; font-weight:bold;"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-bg"></div>
+        <span>&copy; 2025 Разработанно командой Лидер</span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
